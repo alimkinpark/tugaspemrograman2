@@ -2,8 +2,8 @@ package com.upm;
 
 /*
  * ini adalah section komen, tidak perlu ditulis. hanya untuk informasi saja.;
- * ubah nama class ArrayFor;
- * ubah nama variable larik, total, dan valueArray;
+ * ubah nama class Soal2;
+ * ubah nama variable larik, hari, totalBeli, total, dan valueArray;
  *
  * */
 
@@ -13,7 +13,8 @@ public class Soal2 {
 
     public static void main(String[] args) {
 
-        int total = 0, hari, beli = 0;
+        int hari;
+        double beli, totalBeli = 0, total = 0;
 
         Scanner valueArray = new Scanner(System.in);
 
@@ -23,21 +24,22 @@ public class Soal2 {
         System.out.print("Masukkan banyaknya pendapatan(hari) warung kelontong: ");
         hari = valueArray.nextInt();
 
-        int larik[] = new int[hari];
+        double larik[] = new double[hari];
 
         for(int index = 0; index < larik.length; index++) {
             System.out.print("Hari ke "+(index+1)+" : Rp. ");
             larik[index] = valueArray.nextInt();
             total = total + larik[index];
-            beli = beli + (20/100 * larik[index]);
+            beli = 0.2 * larik[index];
+            totalBeli = totalBeli + beli;
         }
 
         System.out.println("``````````````````````````````````````````````");
         System.out.println("Hasil nilai total pendapatan adalah : Rp." + total);
         System.out.println("``````````````````````````````````````````````");
-        System.out.println("Pendapatan buat beli barang selama "+ hari +" hari = Rp." + beli);
+        System.out.println("Pendapatan buat beli barang selama "+ hari +" hari = Rp." + totalBeli);
         System.out.println("``````````````````````````````````````````````");
-        System.out.println("Pendapatan bersih = Rp." + (total - beli));
+        System.out.println("Pendapatan bersih = Rp." + (total - totalBeli));
         System.out.println("``````````````````````````````````````````````");
         System.out.print("Pendapatan rata-rata perhari : Rp." + (total/hari));
     }
