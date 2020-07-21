@@ -1,9 +1,10 @@
 package com.upm;
 
 /*
+ * nama package diatas tidak perlu ditulis
  * ini adalah section komen, tidak perlu ditulis. hanya untuk informasi saja.;
  * ubah nama class Soal2;
- * ubah nama variable larik, hari, totalBeli, total, dan valueArray;
+ * ubah nama variable hari, beli, total, totalBeli, valueArray, larik, index;
  *
  * */
 
@@ -28,7 +29,7 @@ public class Soal2 {
 
         for(int index = 0; index < larik.length; index++) {
             System.out.print("Hari ke "+(index+1)+" : Rp. ");
-            larik[index] = valueArray.nextInt();
+            larik[index] = valueArray.nextDouble();
             total = total + larik[index];
             beli = 0.2 * larik[index];
             totalBeli = totalBeli + beli;

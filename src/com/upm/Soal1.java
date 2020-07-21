@@ -1,5 +1,13 @@
 package com.upm;
 
+/*
+ * nama package diatas tidak perlu ditulis
+ * ini adalah section komen, tidak perlu ditulis. hanya untuk informasi saja.;
+ * ubah nama class Soal1;
+ * ubah nama variable angka, x, masukkan;
+ *
+ * */
+
 import java.util.Scanner;
 
 public class Soal1 {
